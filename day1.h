@@ -8,5 +8,6 @@
 #include <string>
 
 int day1_part1(std::vector<std::string>);
+int day1_part2(std::vector<std::string>);
 
 #endif //ADVENTOFCODE2023_DAY1_H
