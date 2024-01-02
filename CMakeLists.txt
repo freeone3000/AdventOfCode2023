@@ -8,6 +8,10 @@ add_executable(AdventOfCode2023 main.cpp
         day1.cpp
         lines.hpp
         day1.h
+        day4.cpp
+        day4.h
+        util.cpp
+        util.hpp
 )
 set_target_properties(AdventOfCode2023 PROPERTIES LINKER_LANGUAGE CXX)
 target_include_directories(AdventOfCode2023 PRIVATE ${Boost_INCLUDE_DIRS})
@@ -16,6 +20,7 @@ target_compile_definitions(AdventOfCode2023 PRIVATE
         # Pass DEBUG as a compile flag if we're in debug release
         $<$<CONFIG:Debug>:DEBUG>
 )
+target_compile_options(AdventOfCode2023 PRIVATE -mavx -mavx2)
 
 # Day 24 is obviously raytracing, so let's do CUDA
 #set(CMAKE_CUDA_STANDARD 23)

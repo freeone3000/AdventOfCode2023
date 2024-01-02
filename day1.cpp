@@ -3,7 +3,6 @@
 //
 #include <vector>
 #include <string>
-#include <iostream>
 #include <optional>
 #include <boost/circular_buffer.hpp>
 
@@ -92,7 +91,6 @@ int day1_part2(std::vector<std::string> lines) {
         auto last = find_first_number(line.rbegin(), line.rend(), true);
         if(first && last) {
             auto calibration = (*first * 10) + *last;
-            std::cout << "Calibration: " << calibration << std::endl;
             sum += calibration;
         }
     }
